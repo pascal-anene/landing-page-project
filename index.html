@@ -1,59 +1,217 @@
 <!DOCTYPE >
+
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Manipulating the DOM</title>
-  <!-- Load Google Fonts -->
-  <link href="https://fonts.googleapis.com/css?family=Fira+Sans:900|Merriweather&display=swap" rel="stylesheet">  <!-- Load Styles -->
-  <link href="css/styles.css" rel="stylesheet">
-</head>
-<body>
-  <!-- HTML Follows BEM naming conventions 
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Manipulating the DOM</title>
+    <!-- Load Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Fira+Sans:900|Merriweather&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Load Styles -->
+    <link href="css/styles.css" rel="stylesheet" />
+  </head>
+
+  <body>
+    <!-- HTML Follows BEM naming conventions 
   IDs are only used for sections to connect menu achors to sections -->
-  <header class="page__header">
-    <nav class="navbar__menu">
-      <!-- Navigation starts as empty UL that will be populated with JS -->
-      <ul id="navbar__list"></ul>
-    </nav>
-  </header>
-  <main>
-    <header class="main__hero">
-      <h1>Landing Page </h1>
+    <header class="page__header">
+      <nav class="navbar__menu">
+        <!-- Navigation starts as empty UL that will be populated with JS -->
+        <ul id="navbar__list">
+          <li><a href="#">PinkPink.</a></li>
+          <li><a href="#">Showcase</a></li>
+          <li><a href="#">How we do it</a></li>
+          <li><a href="#">Our projects</a></li>
+          <li><a href="#">Testimonials</a></li>
+          <li><a href="#">Subscribe</a></li>
+        </ul>
+      </nav>
     </header>
-    <!-- Each Section has an ID (used for the anchor) and 
+
+    <main>
+      <header class="main__hero">
+
+        <div>
+          <img src="" alt="hero_banner_image">
+        </div>
+
+        <div>
+          <p>quality design for all</p>
+          <h1>we create spaces, build dreams and shape environments.</h1>
+          <p>Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit
+          mollit.</p>
+          <p>explore our products</p>
+        </div>
+
+        <div>
+
+          <div>
+            <img src="" alt="heart_icon">
+            <h3>Best quality</h3>
+            <p>Good design begins with expressing an exceptional story.</p>
+          </div>
+
+          <div>
+            <img src="" alt="thunder_icon">
+            <h3>Rich understanding</h3>
+            <p>Our designers possess a rich understanding of all aspects of a project.</p>
+          </div>
+
+          <div>
+            <img src="" alt="headphones_icon">
+            <h3>Great support</h3>
+            <p>Our forward thinking design teams are leading successful projects worldwide.</p>
+          </div>
+
+        </div>
+      
+      </header>
+      <!-- Each Section has an ID (used for the anchor) and 
     a data attribute that will populate the li node.
     Adding more sections will automatically populate nav.
     The first section is set to active class by default -->
-    <section id="section1" data-nav="Section 1" class="your-active-class">
-      <div class="landing__container">
-        <h2>Section 1</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi fermentum metus faucibus lectus pharetra dapibus. Suspendisse potenti. Aenean aliquam elementum mi, ac euismod augue. Donec eget lacinia ex. Phasellus imperdiet porta orci eget mollis. Sed convallis sollicitudin mauris ac tincidunt. Donec bibendum, nulla eget bibendum consectetur, sem nisi aliquam leo, ut pulvinar quam nunc eu augue. Pellentesque maximus imperdiet elit a pharetra. Duis lectus mi, aliquam in mi quis, aliquam porttitor lacus. Morbi a tincidunt felis. Sed leo nunc, pharetra et elementum non, faucibus vitae elit. Integer nec libero venenatis libero ultricies molestie semper in tellus. Sed congue et odio sed euismod.</p>
+      <section id="section1" data-nav="Section 1" class="your-active-class">
 
-        <p>Aliquam a convallis justo. Vivamus venenatis, erat eget pulvinar gravida, ipsum lacus aliquet velit, vel luctus diam ipsum a diam. Cras eu tincidunt arcu, vitae rhoncus purus. Vestibulum fermentum consectetur porttitor. Suspendisse imperdiet porttitor tortor, eget elementum tortor mollis non.</p>
-      </div>
-    </section>
-    <section id="section2" data-nav="Section 2">
-      <div class="landing__container">
-        <h2>Section 2</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi fermentum metus faucibus lectus pharetra dapibus. Suspendisse potenti. Aenean aliquam elementum mi, ac euismod augue. Donec eget lacinia ex. Phasellus imperdiet porta orci eget mollis. Sed convallis sollicitudin mauris ac tincidunt. Donec bibendum, nulla eget bibendum consectetur, sem nisi aliquam leo, ut pulvinar quam nunc eu augue. Pellentesque maximus imperdiet elit a pharetra. Duis lectus mi, aliquam in mi quis, aliquam porttitor lacus. Morbi a tincidunt felis. Sed leo nunc, pharetra et elementum non, faucibus vitae elit. Integer nec libero venenatis libero ultricies molestie semper in tellus. Sed congue et odio sed euismod.</p>
+        <div class="landing__container">
 
-        <p>Aliquam a convallis justo. Vivamus venenatis, erat eget pulvinar gravida, ipsum lacus aliquet velit, vel luctus diam ipsum a diam. Cras eu tincidunt arcu, vitae rhoncus purus. Vestibulum fermentum consectetur porttitor. Suspendisse imperdiet porttitor tortor, eget elementum tortor mollis non.</p>
-      </div>
-    </section>
-    <section id="section3" data-nav="Section 3">
-      <div class="landing__container">
-        <h2>Section 3</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi fermentum metus faucibus lectus pharetra dapibus. Suspendisse potenti. Aenean aliquam elementum mi, ac euismod augue. Donec eget lacinia ex. Phasellus imperdiet porta orci eget mollis. Sed convallis sollicitudin mauris ac tincidunt. Donec bibendum, nulla eget bibendum consectetur, sem nisi aliquam leo, ut pulvinar quam nunc eu augue. Pellentesque maximus imperdiet elit a pharetra. Duis lectus mi, aliquam in mi quis, aliquam porttitor lacus. Morbi a tincidunt felis. Sed leo nunc, pharetra et elementum non, faucibus vitae elit. Integer nec libero venenatis libero ultricies molestie semper in tellus. Sed congue et odio sed euismod.</p>
+          <div>
 
-        <p>Aliquam a convallis justo. Vivamus venenatis, erat eget pulvinar gravida, ipsum lacus aliquet velit, vel luctus diam ipsum a diam. Cras eu tincidunt arcu, vitae rhoncus purus. Vestibulum fermentum consectetur porttitor. Suspendisse imperdiet porttitor tortor, eget elementum tortor mollis non.</p>
-      </div>
-    </section>
-  </main>
-  <footer class="page__footer">
-    <p>&copy Udacity</p>
-  </footer>
+            <h2>Explore our exclusive design showcase<span>.</span></h2>
 
-</body>
+            <div>
+              <img src="" alt="arrow_left">
+              <img src="" alt="arrow_right">
+            </div>
+            
+          </div>
+          
+          <div>
+
+            <div class="card_image_one"></div> 
+
+            <div class="card_image_two"></div>
+
+            <div class="card_image_three">
+
+              <div>
+
+                <h4>Mopond</h4>
+                <div>
+                  <p>Phonix, arizona</p>
+                  <img src="" alt="arrow_right">
+                </div>
+              </div>
+
+            </div>
+
+          </div>
+        </div>
+
+      </section>
+
+      <section id="section2" data-nav="Section 2">
+
+        <div class="landing__container">
+
+          <h2>This is how we do it<span>.</span></h2>
+
+          <div>
+            <p>01.</p>
+            <h3>Discuss the concept with us.</h3>
+            <p>Do you need a talented design eye to cast vision and look for one-of-a-kind opportunities in your home? This is a robust
+            consultation-conversation package.</p>
+            <p>learn more</p>
+          </div>
+
+          <div>
+            <p>02.</p>
+            <h3>Confirm the provided design.</h3>
+            <p>We will send you a proposal and service agreement for your review. Then we will get down to the exciting stuff and
+            communicate concepts visually.</p>
+            <p>learn more</p>
+          </div>
+
+          <div>
+            <p>03.</p>
+            <h3>We fully design and accessorize your home.</h3>
+            <p>Specializing in whole-home transformations, we design with intention to deliver interiors with a depth of character and
+            emotion, and a breadth of function and practicality.</p>
+            <p>learn more</p>
+          </div>
+
+
+
+        </div>
+
+      </section>
+
+      <section id="section3" data-nav="Section 3">
+
+        <div class="landing__container">
+
+          <h2>Section 3</h2>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi
+            fermentum metus faucibus lectus pharetra dapibus. Suspendisse
+            potenti. Aenean aliquam elementum mi, ac euismod augue. Donec eget
+            lacinia ex. Phasellus imperdiet porta orci eget mollis. Sed
+            convallis sollicitudin mauris ac tincidunt. Donec bibendum, nulla
+            eget bibendum consectetur, sem nisi aliquam leo, ut pulvinar quam
+            nunc eu augue. Pellentesque maximus imperdiet elit a pharetra. Duis
+            lectus mi, aliquam in mi quis, aliquam porttitor lacus. Morbi a
+            tincidunt felis. Sed leo nunc, pharetra et elementum non, faucibus
+            vitae elit. Integer nec libero venenatis libero ultricies molestie
+            semper in tellus. Sed congue et odio sed euismod.
+          </p>
+
+          <p>
+            Aliquam a convallis justo. Vivamus venenatis, erat eget pulvinar
+            gravida, ipsum lacus aliquet velit, vel luctus diam ipsum a diam.
+            Cras eu tincidunt arcu, vitae rhoncus purus. Vestibulum fermentum
+            consectetur porttitor. Suspendisse imperdiet porttitor tortor, eget
+            elementum tortor mollis non.
+          </p>
+        </div>
+      </section>
+
+      <section id="section3" data-nav="Section 3">
+      
+        <div class="landing__container">
+      
+          <h2>Section 3</h2>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi
+            fermentum metus faucibus lectus pharetra dapibus. Suspendisse
+            potenti. Aenean aliquam elementum mi, ac euismod augue. Donec eget
+            lacinia ex. Phasellus imperdiet porta orci eget mollis. Sed
+            convallis sollicitudin mauris ac tincidunt. Donec bibendum, nulla
+            eget bibendum consectetur, sem nisi aliquam leo, ut pulvinar quam
+            nunc eu augue. Pellentesque maximus imperdiet elit a pharetra. Duis
+            lectus mi, aliquam in mi quis, aliquam porttitor lacus. Morbi a
+            tincidunt felis. Sed leo nunc, pharetra et elementum non, faucibus
+            vitae elit. Integer nec libero venenatis libero ultricies molestie
+            semper in tellus. Sed congue et odio sed euismod.
+          </p>
+      
+          <p>
+            Aliquam a convallis justo. Vivamus venenatis, erat eget pulvinar
+            gravida, ipsum lacus aliquet velit, vel luctus diam ipsum a diam.
+            Cras eu tincidunt arcu, vitae rhoncus purus. Vestibulum fermentum
+            consectetur porttitor. Suspendisse imperdiet porttitor tortor, eget
+            elementum tortor mollis non.
+          </p>
+        </div>
+      </section>
+
+
+    </main>
+
+    <footer class="page__footer">
+      <p>&copy Udacity</p>
+    </footer>
+  </body>
 </html>
