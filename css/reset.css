@@ -1,0 +1,57 @@
+/* 
+* Some CSS Custom Resets 
+* 1. Remove default margin
+* 2. Set the Percentage-based heights, including root for future React development
+* 3. Tweaking line-height
+* 4. Font smoothing with antialiased
+* 5. Sensible media defaults for img, video and others
+* 6. Inherit fonts for form controls
+* 7. Tweak Word wrapping
+* 8. Optional: for future react development, Root stacking context 
+*/
+
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* html, body, #__next {
+  height: 100%;
+} */
+
+body {
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+    padding: 1rem 4rem;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+    display: block;
+    max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    overflow-wrap: break-word;
+}
+
+#root,
+#__next {
+    isolation: isolate;
+}
